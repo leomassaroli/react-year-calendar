@@ -1,0 +1,12 @@
+.calendar {
+  background-color: indigo;
+  color: white;
+  padding: 10px;
+}
+
+.calendar .calendar_column {
+  background-color: teal;
+  display: inline-block;
+  margin: 5px;
+  padding: 5px;
+}

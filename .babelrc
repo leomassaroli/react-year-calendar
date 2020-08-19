@@ -1,0 +1,7 @@
+{
+  "presets": ["@babel/preset-env", "@babel/preset-react"],
+  "plugins": [
+    "@babel/plugin-transform-runtime" /* Esto es para que acepte async/await */
+  ],
+  "sourceType": "unambiguous" /* Esto es para que acepte tanto "module.exports" como "export default" */
+}
