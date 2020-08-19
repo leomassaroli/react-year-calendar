@@ -7,7 +7,6 @@ export default function (props) {
 
   return (
     <div className="app">
-      <p>petes de mierda</p>
       <CategoryList />
       <Calendar date={date} />
     </div>

@@ -54,13 +54,13 @@ export default function (props) {
       <table>
         <thead>
           <tr>
-            <th>Domingo</th>
-            <th>Lunes</th>
-            <th>Martes</th>
-            <th>Miercoles</th>
-            <th>Jueves</th>
-            <th>Viernes</th>
-            <th>Sabado</th>
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
           </tr>
         </thead>
 

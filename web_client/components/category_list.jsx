@@ -5,8 +5,8 @@ class CategoryList extends React.Component {
   render() {
     return (
       <ul>
-        <Category>Vacaciones</Category>
-        <Category>Trabajo</Category>
+        <Category>Vacaciones (TODO)</Category>
+        <Category>Trabajo (TODO)</Category>
       </ul>
     );
   }

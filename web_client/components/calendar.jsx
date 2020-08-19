@@ -12,89 +12,74 @@ class Calendar extends React.Component {
   render() {
     return (
       <div className="calendar">
-        <p>Año {this.year}</p>
+        <p>Year {this.year}</p>
 
         <CalendarColumn
           year={this.year}
-          months={[
-            yearData.enero,
-            yearData.febrero,
-            yearData.marzo,
-            yearData.abril,
-          ]}
+          months={[yearData[0], yearData[1], yearData[2], yearData[3]]}
         />
         <CalendarColumn
           year={this.year}
-          months={[
-            yearData.mayo,
-            yearData.junio,
-            yearData.julio,
-            yearData.agosto,
-          ]}
+          months={[yearData[4], yearData[5], yearData[6], yearData[7]]}
         />
         <CalendarColumn
           year={this.year}
-          months={[
-            yearData.septiembre,
-            yearData.octubre,
-            yearData.noviembre,
-            yearData.diciembre,
-          ]}
+          months={[yearData[8], yearData[9], yearData[10], yearData[11]]}
         />
       </div>
     );
   }
 }
 
-const yearData = {
-  enero: {
+const yearData = [
+  {
     month: 1,
-    name: "Enero",
+    name: "January",
   },
-  febrero: {
+  {
     month: 2,
-    name: "Febrero",
+    name: "February",
   },
-  marzo: {
+  {
     month: 3,
-    name: "Marzo",
+    name: "March",
   },
-  abril: {
+  {
     month: 4,
-    name: "Abril",
+    name: "April",
   },
-  mayo: {
+  {
     month: 5,
-    name: "Mayo",
+    name: "May",
   },
-  junio: {
+  {
     month: 6,
-    name: "Junio",
+    name: "June",
   },
-  julio: {
+  {
     month: 7,
-    name: "Julio",
+    name: "July",
   },
-  agosto: {
+  {
     month: 8,
-    name: "Agosto",
+    name: "August",
   },
-  septiembre: {
+  {
     month: 9,
-    name: "Septiembre",
+    name: "September",
   },
-  octubre: {
+  {
     month: 10,
-    name: "Octubre",
+    name: "October",
   },
-  noviembre: {
+  {
     month: 11,
-    name: "Noviembre",
+    name: "November",
   },
-  diciembre: {
+  {
     month: 12,
-    name: "Diciembre",
+    name: "December",
   },
-};
+];
 
 export default Calendar;
