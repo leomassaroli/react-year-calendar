@@ -1,4 +1,5 @@
 import React from "react";
+import Day from "./day.jsx";
 export default function (props) {
   const year = props.year;
   const monthNumber = props.month.month;
@@ -7,7 +8,7 @@ export default function (props) {
   const blanks = new Date(year, monthNumber - 1, 1).getDay();
   const totalSlots = blanks + daysNumber;
 
-  const weeks = Math.ceil(totalSlots / 7);
+  const weeks = 6;
   const weeksMatrix = [];
   for (let i = 0; i < weeks; i++) {
     weeksMatrix[i] = [];
@@ -15,15 +16,16 @@ export default function (props) {
       const dayPos = i * 7 + (j + 1);
 
       if (dayPos > totalSlots) {
-        break;
-      }
-
-      if (blanks >= dayPos) {
-        weeksMatrix[i][j] = null;
+        weeksMatrix[i][j] = <td></td>;
         continue;
       }
 
-      weeksMatrix[i][j] = dayPos - blanks;
+      if (blanks >= dayPos) {
+        weeksMatrix[i][j] = <td></td>;
+        continue;
+      }
+
+      weeksMatrix[i][j] = <Day day={dayPos - blanks} />;
     }
   }
 
@@ -36,19 +38,19 @@ export default function (props) {
   function renderWeek(week) {
     return (
       <tr>
-        <td>{weeksMatrix[week][0]}</td>
-        <td>{weeksMatrix[week][1]}</td>
-        <td>{weeksMatrix[week][2]}</td>
-        <td>{weeksMatrix[week][3]}</td>
-        <td>{weeksMatrix[week][4]}</td>
-        <td>{weeksMatrix[week][5]}</td>
-        <td>{weeksMatrix[week][6]}</td>
+        {weeksMatrix[week][0]}
+        {weeksMatrix[week][1]}
+        {weeksMatrix[week][2]}
+        {weeksMatrix[week][3]}
+        {weeksMatrix[week][4]}
+        {weeksMatrix[week][5]}
+        {weeksMatrix[week][6]}
       </tr>
     );
   }
 
   return (
-    <div>
+    <div className="month">
       <p>{props.month.name}</p>
 
       <table>

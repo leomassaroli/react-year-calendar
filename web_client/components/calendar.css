@@ -1,12 +1,32 @@
 .calendar {
-  background-color: indigo;
+  background-color: #444;
   color: white;
   padding: 10px;
 }
 
 .calendar .calendar_column {
-  background-color: teal;
+  background-color: #333;
   display: inline-block;
+}
+
+.calendar .month {
   margin: 5px;
   padding: 5px;
+}
+
+.calendar .month table th,
+.calendar .month table td {
+  width: 35px;
+  height: 35px;
+  background-color: #222222;
+  color: white;
+}
+
+.calendar .month table td.day {
+  cursor: pointer;
+  text-align: center;
+}
+
+.calendar .month table td.day:hover {
+  filter: brightness(150%);
 }
