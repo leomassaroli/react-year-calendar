@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node index.js",
     "build": "webpack",
-    "test": "jest (TODO)"
+    "test": "jest"
   },
   "author": "",
   "license": "ISC",
@@ -24,6 +24,8 @@
     "webpack-cli": "^3.3.12"
   },
   "dependencies": {
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.3",
     "jest": "^26.4.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
